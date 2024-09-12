@@ -8,6 +8,14 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      colors: {
+        nexBlack: {
+          500: "#111116"
+        },
+        nexGray: {
+          500: "#959595"
+        }
+      }
     },
   },
   plugins: [],

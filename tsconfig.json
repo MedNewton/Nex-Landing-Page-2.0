@@ -26,8 +26,13 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
-    }
+			"@/*": ["./src/*"],
+			"@components/*": ["./src/components/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@store/*": ["./src/store/*"],
+      "@styles/*": ["./src/styles/*"],
+			"@utils/*": ["./src/utils/*"],
+		}
   },
   "include": [
     ".eslintrc.cjs",
