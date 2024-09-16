@@ -4,6 +4,7 @@ import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader'; // Correct i
 import { Text3D, MeshTransmissionMaterial } from '@react-three/drei';
 import { Center } from '@react-three/drei';
 import Grid from './Grid';
+import { useTheme } from "next-themes";
 
 interface TextProps {
   children: React.ReactNode;
@@ -14,7 +15,9 @@ interface TextProps {
 
 const TextModel: React.FC<TextProps> = ({ children, config, font = '/inter.json', ...props }) => {
   const texture = useLoader(RGBELoader, 'https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/aerodynamics_workshop_1k.hdr');
-  
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
   return (
     <>
       <group>
@@ -34,7 +37,7 @@ const TextModel: React.FC<TextProps> = ({ children, config, font = '/inter.json'
             <MeshTransmissionMaterial {...config} background={texture} />
           </Text3D>
         </Center>
-        <Grid />
+        <Grid mode={currentTheme} />
       </group>
     </>
   );

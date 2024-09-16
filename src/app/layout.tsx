@@ -1,7 +1,7 @@
 import "@styles/globals.css";
-import Head from "next/head";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { Providers } from "@/components/Generic/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "NexLabs - Index your trades, your investment, your future",
@@ -14,7 +14,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
