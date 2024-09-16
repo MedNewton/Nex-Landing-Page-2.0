@@ -7,7 +7,7 @@ const Navbar = () => {
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     return (
-        <nav className="w-full h-fit flex flex-row items-center justify-between px-8 pt-4">
+        <nav className="w-full h-fit flex flex-row items-center justify-between px-2 lg:px-8 pt-4">
             <h5 className="font-medium text-2xl">Nex Labs</h5>
             <div className="w-fit h-fit flex flex-row items-center justify-end gap-1">
                 <ThemeSwitch />
