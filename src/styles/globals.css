@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 100;
+    src: url('./fonts/Aeonik-Thin.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./fonts/Aeonik-Air.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/Aeonik-Light.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Aeonik-Regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/Aeonik-Medium.otf') format("opentype");
+}
+
+
+@font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/Aeonik-Bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./fonts/Aeonik-Black.otf') format("opentype");
+}
+
+
+*{
+    font-family: "Aeonik";
+}
+
+html, body{
+    overflow-x: hidden !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .preloader{
+    z-index: 999 !important;
+  }

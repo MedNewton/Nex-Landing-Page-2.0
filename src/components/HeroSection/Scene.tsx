@@ -34,8 +34,8 @@ export default function HeroScene() {
         autoRotate: false,
       }
     return (
-        <section className="w-[98vw] h-[95vh] rounded-xl mx-auto">
-            <Canvas className="rounded-xl" shadows orthographic camera={{ position: [10, 20, 22], zoom: 60 }} gl={{ preserveDrawingBuffer: true }}>
+        <section className="w-[97%] h-[90vh] rounded-xl mx-auto">
+            <Canvas className="rounded-xl w-full max-w-full" shadows orthographic camera={{ position: [10, 20, 22], zoom: 60 }} gl={{ preserveDrawingBuffer: true }}>
                 
                 {/** The text and the grid */}
                 <TextModel config={config} rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 2.25]}>
