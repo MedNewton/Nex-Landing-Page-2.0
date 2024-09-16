@@ -32,15 +32,15 @@ export default function HeroScene() {
         color: '#FFFFFF',
         shadow: '#65BA76',
         autoRotate: false,
-      }
+    }
     return (
         <section className="w-[97%] h-[90vh] rounded-xl mx-auto bg-nexGray-500">
             <Canvas className="rounded-xl w-full max-w-full" shadows orthographic camera={{ position: [10, 20, 22], zoom: 60 }} gl={{ preserveDrawingBuffer: true }}>
-            <EthModel />  
+                <EthModel />
                 <TextModel config={config} rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 2.25]}>
                     {text}
-                </TextModel> 
-                             
+                </TextModel>
+
                 <Environment resolution={32}>
                     <group rotation={[-Math.PI / 4, -0.3, 0]}>
                         <Lightformer intensity={20} rotation-x={Math.PI / 2} position={[0, 5, -9]} scale={[10, 10, 1]} />
@@ -50,10 +50,21 @@ export default function HeroScene() {
                         <Lightformer type="ring" intensity={2} rotation-y={Math.PI / 2} position={[-0.1, -1, -5]} scale={10} />
                     </group>
                 </Environment>
+                <spotLight 
+                    position={[0, 0, 10]} 
+                    angle={0} 
+                    penumbra={1} 
+                    intensity={1} 
+                    castShadow
+                    shadow-mapSize-width={1024} 
+                    shadow-mapSize-height={1024} 
+                    shadow-camera-near={10} 
+                    shadow-camera-far={100} 
+                />
                 <AccumulativeShadows frames={100} color={shadow} colorBlend={5} toneMapped={true} alphaTest={0.9} opacity={1} scale={50} position={[0, -1.01, 0]}>
                     <RandomizedLight amount={4} radius={10} ambient={0.5} intensity={1} position={[0, 10, -10]} size={15} mapSize={1024} bias={0.0001} />
                 </AccumulativeShadows>
-                
+
             </Canvas>
         </section>
     )

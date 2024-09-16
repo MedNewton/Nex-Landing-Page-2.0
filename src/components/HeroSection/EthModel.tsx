@@ -43,7 +43,7 @@ export default function EthModel() {
     }, [actions]);
 
     return (
-        <group ref={group} scale={viewport.width / 15} position={[viewport.height / 3 + 8, viewport.width / 3 + 2, 3]} castShadow dispose={null}>
+        <group ref={group} scale={viewport.width / 15} position={[viewport.width / 4 , 1.5, viewport.height / 10 - 6 ]} castShadow dispose={null}>
             <group name="Sketchfab_Scene">
                 <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
                     <group name="root">
@@ -52,7 +52,7 @@ export default function EthModel() {
                                 <mesh
                                     name="Object_4"
                                     castShadow
-                                    receiveShadow
+                                    receiveShadow={false}
                                     geometry={nodes.Object_4?.geometry}  // Optional chaining for safety
                                     material={materials.SILVER_metal}    // Optional chaining for material
                                 />
