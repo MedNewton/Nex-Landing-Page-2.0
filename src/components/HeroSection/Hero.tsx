@@ -5,7 +5,7 @@ import Preloader from "../Generic/Preloader";
 // 3D : 
 const HeroScene = dynamic(() => import('@components/HeroSection/Scene'), {
     ssr: false,
-    loading: () => (<Preloader precentage={50} />)
+    loading: () => (<></>)
 })
 
 const HeroSection = () => {
