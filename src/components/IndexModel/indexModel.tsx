@@ -10,7 +10,7 @@ const SpotIndexModel = () => {
     return (
         <section className="w-full h-fit flex flex-col items-center justify-start p-6 gap-6">
             <h5 className="text-3xl font-semibold">Spot Index Model</h5>
-            <div className="w-full h-fit flex flex-row items-stretch justify-between relative bg-nexLightCard-500 dark:bg-nexDarkCard-500 shadow-lg dark:shadow-none rounded-xl p-4 gap-4">
+            <div className="w-full h-fit flex flex-row items-stretch justify-between relative bg-nexLightCard-500 dark:bg-nexDarkCard-500 shadow-lg dark:shadow-none rounded-xl p-4 gap-4  overflow-hidden">
                 <div className="w-3/5 h-fit left-0 top-0 flex flex-col items-start justify-start p-4 gap-2">
                     <h5 className="text-3xl font-semibold">Diversify with Confidence</h5>
                     <h6 className="text-xl font-medium flex flex-row items-center"> The Spot Index Standard Model for Portfolio Enhancement</h6>
@@ -35,7 +35,7 @@ const SpotIndexModel = () => {
                         </div>
                     </div>
                 </div>
-                <Image src={xmodel} alt="x logo xlogo nex labs nexlabs" className="absolute right-0 top-0"></Image>
+                <Image src={xmodel} alt="x logo xlogo nex labs nexlabs" className="absolute right-0 -top-[20%] h-[90vh] w-auto"></Image>
             </div>
 
         </section>
