@@ -1,19 +1,14 @@
 "use client";
 
 // Essentials: 
-import React, { useRef, useLayoutEffect } from 'react';
+import React, { useRef } from 'react';
 
 // 3RDrei & R3JS: 
-import { useGLTF, MeshTransmissionMaterial, Center, AccumulativeShadows, RandomizedLight } from '@react-three/drei';
-import { type Mesh, type Material, type Clock } from 'three';
+import { useGLTF, MeshTransmissionMaterial, Center } from '@react-three/drei';
+import { type Mesh, type Material } from 'three';
 
 // R3F : 
-import { useFrame, useThree, } from '@react-three/fiber';
-
-// leva : 
-import { useControls } from 'leva';
-import { metalness, roughness, thickness } from 'three/webgpu';
-
+import { useThree, } from '@react-three/fiber';
 
 interface MyGLTF {
     nodes: {

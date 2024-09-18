@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoader } from '@react-three/fiber';
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader'; // Correct import path
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
 import { Text3D, MeshTransmissionMaterial } from '@react-three/drei';
 import { Center } from '@react-three/drei';
 import Grid from './Grid';
@@ -8,9 +8,9 @@ import { useTheme } from "next-themes";
 
 interface TextProps {
   children: React.ReactNode;
-  config?: React.ComponentProps<typeof MeshTransmissionMaterial>; // Type based on the props of MeshTransmissionMaterial
+  config?: React.ComponentProps<typeof MeshTransmissionMaterial>;
   font?: string;
-  [key: string]: unknown; // For any other props that might be passed to the Center component
+  [key: string]: unknown;
 }
 
 const TextModel: React.FC<TextProps> = ({ children, config, font = '/inter.json', ...props }) => {

@@ -2,35 +2,31 @@ import { useFrame } from '@react-three/fiber'
 import { Vector3 } from 'three'
 
 export default function CameraRig() {
-    const initialPosition = new Vector3(0, 2, 5); // Starting position
-    const rightPosition = new Vector3(2, 2, 5); // Position to the right
-    const leftPosition = new Vector3(-2, 2, 5); // Position to the left
-    const zoomPosition = new Vector3(0, 2, 3); // Zoomed-in position
-    const duration = 20; // Duration of one full cycle in seconds (increased for slower animation)
+    const initialPosition = new Vector3(0, 2, 5);
+    const rightPosition = new Vector3(2, 2, 5);
+    const leftPosition = new Vector3(-2, 2, 5);
+    const zoomPosition = new Vector3(0, 2, 3);
+    const duration = 20;
 
     useFrame((state) => {
-        const t = (state.clock.elapsedTime % duration) / duration; // Time normalized to the duration
-        const phase = Math.floor(t * 4); // Determine the current phase of the animation
+        const t = (state.clock.elapsedTime % duration) / duration;
+        const phase = Math.floor(t * 4);
         
         const targetPosition = initialPosition.clone();
-
-        // Use smooth cubic easing for transitions
-        const easeInOut = (p: number) => p * p * (3 - 2 * p); // Simple cubic easing function
-
-        // Progress within the current phase
+        const easeInOut = (p: number) => p * p * (3 - 2 * p)
         const progress = easeInOut((t * 4) % 1); 
         
         switch (phase) {
-            case 0: // Moving right
+            case 0:
                 targetPosition.lerpVectors(initialPosition, rightPosition, progress);
                 break;
-            case 1: // Moving left
+            case 1:
                 targetPosition.lerpVectors(rightPosition, leftPosition, progress);
                 break;
-            case 2: // Zooming in
+            case 2:
                 targetPosition.lerpVectors(leftPosition, zoomPosition, progress);
                 break;
-            case 3: // Returning to initial position
+            case 3:
                 targetPosition.lerpVectors(zoomPosition, initialPosition, progress);
                 break;
             default:

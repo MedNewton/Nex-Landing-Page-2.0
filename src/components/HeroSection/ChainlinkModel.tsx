@@ -12,7 +12,7 @@ import { useThree, useFrame } from '@react-three/fiber';
 
 interface GLTFResult {
     nodes: {
-        Curve?: Mesh;  // Curve is expected to be a Mesh object, adjust this if needed
+        Curve?: Mesh;
     };
     materials: Record<string, Material>;
 }
@@ -44,21 +44,20 @@ export default function ChainlinkModel() {
     }
 
     useFrame(({ clock }) => {
-        const t = clock.getElapsedTime();  // Get elapsed time
-        const amplitude = 0.2;  // Max height (up) in z-direction
-        const speed = 1;  // Adjust to control speed of the animation
-        group.current.position.y = Math.sin(t * speed) * amplitude;  // Move up and down smoothly
+        const t = clock.getElapsedTime();
+        const amplitude = 0.2;
+        const speed = 1;
+        group.current.position.y = Math.sin(t * speed) * amplitude;
     });
 
     return (
         <group ref={group} scale={viewport.width * 10} position={[-viewport.width / 4 , -0.5, viewport.height / 2 + 2 ]} castShadow dispose={null}>
-            {/* Check for nodes.Curve before accessing its geometry */}
             {nodes.Curve && (
                 <mesh
                     castShadow
                     receiveShadow
                     geometry={nodes.Curve.geometry}
-                    material={materials['SVGMat.001']}  // Safe assignment after ensuring Curve exists
+                    material={materials['SVGMat.001']}
                 />
             )}
             <MeshTransmissionMaterial {...materialProps} />
@@ -66,5 +65,4 @@ export default function ChainlinkModel() {
     );
 }
 
-// Preload of the GLB model
 useGLTF.preload('/media/chainlink.glb');

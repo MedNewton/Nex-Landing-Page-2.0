@@ -12,16 +12,15 @@ import { useThree } from '@react-three/fiber';
 
 interface GLTFResult {
     nodes: {
-        Object_4?: Mesh;  // Assuming Object_4 is a Mesh
+        Object_4?: Mesh;
     };
     materials: {
-        SILVER_metal?: Material;  // Assuming SILVER_metal is a Material
+        SILVER_metal?: Material; 
     };
-    animations: AnimationClip[]; // Include animations as an array of AnimationClips
+    animations: AnimationClip[];
 }
 
 export default function EthModel() {
-    // Loading GLB model
     const group = useRef<Group>(null!);
     const { nodes, materials, animations } = useGLTF('/media/ethereum_logo_3d.glb') as GLTFResult;
     const { actions } = useAnimations(animations, group);
@@ -53,8 +52,8 @@ export default function EthModel() {
                                     name="Object_4"
                                     castShadow
                                     receiveShadow={false}
-                                    geometry={nodes.Object_4?.geometry}  // Optional chaining for safety
-                                    material={materials.SILVER_metal}    // Optional chaining for material
+                                    geometry={nodes.Object_4?.geometry}
+                                    material={materials.SILVER_metal}
                                 />
                             </group>
                         </group>
@@ -65,5 +64,4 @@ export default function EthModel() {
     );
 }
 
-// Preload of the GLB model
 useGLTF.preload('/media/ethereum_logo_3d.glb');

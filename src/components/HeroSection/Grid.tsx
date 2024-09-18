@@ -13,7 +13,6 @@ interface GridProps {
 
 const Grid: React.FC<GridProps> = ({ number = 23, lineWidth = 0.026, height = 0.5, mode }) => (
   
-  // Renders a grid and crosses as instances
   <Instances position={[0, -1.02, 0]} receiveShadow={false}>
     <planeGeometry args={[lineWidth, height]} />
     <meshBasicMaterial color="#053E43" />
