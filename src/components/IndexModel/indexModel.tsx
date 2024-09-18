@@ -16,7 +16,7 @@ const SpotIndexModel = () => {
                     <h6 className="text-xl font-medium flex flex-row items-center"> The Spot Index Standard Model for Portfolio Enhancement</h6>
                     <p className="text-base w-11/12 leading-relaxed">
                         The Spot Index Standard Model aims to enable investors to diversify their portfolios by investing in an asset index rather than a single cryptocurrency.
-                        It generates a redeemable ERC-20 token, termed the "index token."
+                        It generates a redeemable ERC-20 token, termed the {'"'}index token.{'"'}
                         Each index token is supported by collateral stored securely in a custodian wallet, reminiscent of wBTC backed by Bitcoin.
                     </p>
                     <h6 className="text-lg font-bold flex flex-row items-center">Key features:</h6>
