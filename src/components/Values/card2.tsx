@@ -12,9 +12,9 @@ function Item(props: GroupProps) {
 
   useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.x += 0.01;
-      ref.current.rotation.y += 0.01;
-      ref.current.rotation.z += 0.01;
+      ref.current.rotation.x += 0.02;
+      ref.current.rotation.y += 0.02;
+      ref.current.rotation.z += 0.02;
     }
   });
 
@@ -32,7 +32,7 @@ export const Card2 = () => {
 
   useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.rotation.z -= 0.01;
+      groupRef.current.rotation.z -= 0.02;
     }
   });
 
