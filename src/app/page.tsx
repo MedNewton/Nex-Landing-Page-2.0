@@ -11,6 +11,7 @@ import HeroSection from "@/components/HeroSection/Hero";
 import About from "@/components/About/about";
 import Catalogue from "@/components/Catalogue/catalogue";
 import Values from "@/components/Values/values";
+import SpotIndexModel from "@/components/IndexModel/indexModel";
 import Chainlink from "@/components/Chainlink/chainlink";
 
 export default function HomePage() {
@@ -40,6 +41,7 @@ export default function HomePage() {
         <About />
         <Catalogue />
         <Values />
+        <SpotIndexModel />
         <Chainlink />
       </main>
 

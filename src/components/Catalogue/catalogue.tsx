@@ -44,7 +44,7 @@ const Catalogue = () => {
                             </div>
                         </div>
                         <div className="w-full h-fit flex flex-col items-start justify-start gap-4">
-                            <h6 className="text-xl font-bold flex flex-row items-center">Composition</h6>
+                            <h6 className="text-lg font-medium">Composition</h6>
                             <div className="w-full h-fit grid grid-cols-5 gap-2">
                                 <div className="w-full h-fit flex flex-col items-center justify-start gap-2">
                                     <div className="h-12 aspect-square">
