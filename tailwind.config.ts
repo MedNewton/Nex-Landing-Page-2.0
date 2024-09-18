@@ -18,6 +18,12 @@ export default {
         },
         nexGreen: {
           500: "#81B48C"
+        },
+        nexDarkCard: {
+          500: "#1E1E1E"
+        },
+        nexLightCard: {
+          500: "#FFFFFF"
         }
       }
     },

@@ -9,6 +9,7 @@ import { AccumulativeShadows, Environment, Lightformer, RandomizedLight } from "
 // Model(s) : 
 import TextModel from "./TextModel";
 import EthModel from "./EthModel";
+import ChainlinkModel from "./ChainlinkModel";
 
 export default function HeroScene() {
 
@@ -37,6 +38,7 @@ export default function HeroScene() {
         <section className="w-[97%] h-[90vh] rounded-xl mx-auto bg-nexGray-500">
             <Canvas className="rounded-xl w-full max-w-full" shadows orthographic camera={{ position: [10, 20, 22], zoom: 60 }} gl={{ preserveDrawingBuffer: true }}>
                 <EthModel />
+                <ChainlinkModel />
                 <TextModel config={config} rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 2.25]}>
                     {text}
                 </TextModel>

@@ -10,8 +10,9 @@ const HeroScene = dynamic(() => import('@components/HeroSection/Scene'), {
 
 const HeroSection = () => {
     return (
-        <section className="w-screen h-fit min-h-[90vh]">
-            <HeroScene />
+        <section className="w-screen h-fit min-h-[90vh] relative">
+            
+            
         </section>
     )
 }

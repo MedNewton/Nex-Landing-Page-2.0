@@ -9,6 +9,8 @@ import Preloader from "@/components/Generic/Preloader";
 import Navbar from "@/components/Navbar/Navbar";
 import HeroSection from "@/components/HeroSection/Hero";
 import About from "@/components/About/about";
+import Catalogue from "@/components/Catalogue/catalogue";
+import Chainlink from "@/components/Chainlink/chainlink";
 
 export default function HomePage() {
 
@@ -35,6 +37,8 @@ export default function HomePage() {
         <Navbar />
         <HeroSection />
         <About />
+        <Catalogue />
+        <Chainlink />
       </main>
 
     </>
