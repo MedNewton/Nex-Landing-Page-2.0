@@ -24,6 +24,12 @@ export default {
         },
         nexLightCard: {
           500: "#FFFFFF"
+        },
+        nexLightGreen: {
+          500: "#089981",
+        },
+        nexLightRed:{
+          500: "#F23645"
         }
       }
     },
