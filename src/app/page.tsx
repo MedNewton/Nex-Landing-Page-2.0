@@ -10,6 +10,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import HeroSection from "@/components/HeroSection/Hero";
 import About from "@/components/About/about";
 import Catalogue from "@/components/Catalogue/catalogue";
+import Values from "@/components/Values/values";
 import Chainlink from "@/components/Chainlink/chainlink";
 
 export default function HomePage() {
@@ -38,6 +39,7 @@ export default function HomePage() {
         <HeroSection />
         <About />
         <Catalogue />
+        <Values />
         <Chainlink />
       </main>
 
